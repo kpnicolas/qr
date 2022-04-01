@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="qr.png">
+    <title>QR</title>
+    
+    <style>
+        body{ text-align: center;
+
+        }
+        #qrcode{margin: auto; width: min-content;}
+    </style>
+</head>
+<body>
+    <h1>Genera un QR</h1>
+    <input type="text" id="text"/>
+    <button id="btn">Generar</button><br><br>
+    <div id="qrcode"></div>
+</body>
+</html>
+<script src="qrcode.js"></script>
+<script>
+    
+var code = new QRCode(qrcode);
+    btn.addEventListener('click',()=> {
+        
+    code.clear();
+    console.log("a")
+    
+    code.makeCode(text.value);
+    
+    });
+    </script>
